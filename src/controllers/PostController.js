@@ -15,7 +15,7 @@ module.exports = {
   async store(req, res) {
     // objetos que representam campos dentro do body e parametros da requisição
     const {
-      author, place, description, hashtag,
+      author, place, description, hashtags,
     } = req.body;
     const { filename: image } = req.file;
     const [name] = image.split('.');
@@ -33,7 +33,7 @@ module.exports = {
       author,
       place,
       description,
-      hashtag,
+      hashtags,
       image: filename,
     });
 
